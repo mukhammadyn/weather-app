@@ -1,0 +1,37 @@
+@import '../../assets/scss/variables';
+
+.weather-detail {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.5);
+}
+
+.weather-detail__heading {
+  margin: 0;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.weather-detail__desc-list {
+  margin: 0;
+}
+
+.weather-detail__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.weather-detail__desc-heading {
+  color: $color-secondary;
+}
+
+.weather-detail__desc-info {
+  margin: 0;
+}

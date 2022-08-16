@@ -5,7 +5,8 @@ module.exports = function override(config) {
     '@api': 'src/api',
     '@images': 'src/assets/img',
     '@store': 'src/app',
-    '@utils': 'src/utils'
+    '@utils': 'src/utils',
+    '@assets': 'src/assets',
   })(config);
 
   return config;

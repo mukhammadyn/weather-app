@@ -1,0 +1,29 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+
+.cities {
+  @include list-unstyled;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(228, 228, 228, 0.5);
+}
+
+.cities__item {
+  
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.cities__btn {
+  padding: 0;
+  color: $color-secondary;
+  background-color: transparent;
+  border: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
