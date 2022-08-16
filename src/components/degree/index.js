@@ -1,0 +1,1 @@
+export { Degree } from "./degree";
