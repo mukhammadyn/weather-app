@@ -1,17 +1,18 @@
-import axios from "axios"
+// import axios from "axios"
 // eslint-disable-next-line
 export default ({
-  method = 'get',
+  method = 'GET',
   url = '',
   headers = {},
   data = {},
 }) => {
-  return axios({
-    method,
-    url,
-    headers,
-    data,
-  }).catch((error) => {
-    return new Error(error)
-  })
+  if(method === 'GET') {
+    return fetch(url)
+  } else {
+    return fetch(url, {
+      method,
+      headers,
+      data,
+    })
+  }
 }
