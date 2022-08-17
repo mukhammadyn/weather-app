@@ -110,6 +110,10 @@
 
 @include breakpoint-down(600px) {
   .weather-main__info {
+    padding-left: 0;
+  }
+
+  .weather-main__info {
     flex-direction: column;
   }
 }
