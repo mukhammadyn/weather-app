@@ -1,18 +1,25 @@
-import './cities-list.scss'
+import hoc from "@utils/hoc";
+import { useCitiesListProp } from "./cities-list.prop";
+import "./cities-list.scss";
 
-export const CitiesList = () => {
-  return <ul className="cities">
-    <li className="cities__item">
-      <button className="cities__btn" data-city="samarkand">Samarkand</button>
-    </li>
-    <li className="cities__item">
-      <button className="cities__btn" data-city="khorazm">Khorazm</button>
-    </li>
-    <li className="cities__item">
-      <button className="cities__btn" data-city="karshi">Karshi</button>
-    </li>
-    <li className="cities__item">
-      <button className="cities__btn" data-city="andijan">Andijan</button>
-    </li>
-  </ul>
-}
+export const CitiesList = hoc(
+  useCitiesListProp,
+  ({ handleCitiesListClick, localCities }) => {
+    return (
+      <ul className="cities" onClick={handleCitiesListClick}>
+        {localCities?.length > 0 &&
+          localCities.map((city) => (
+            <li className="cities__item" key={city.id}>
+              <button
+                className="cities__btn"
+                data-name={city.name}
+                id={city.id}
+              >
+                {city.name}
+              </button>
+            </li>
+          ))}
+      </ul>
+    );
+  }
+);

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import "./weather-detail.scss";
 
 export const WeatherDetail = () => {
-  const { clouds, humidity, wind } = useSelector(
+  const { clouds, humidity, wind, rain } = useSelector(
     (state) => state.currentWeather.currentWeather
   );
 
@@ -24,7 +24,7 @@ export const WeatherDetail = () => {
         </div>
         <div className="weather-detail__info-wrapper">
           <dt className="weather-detail__desc-heading">Rain</dt>
-          <dd className="weather-detail__desc-info">0mm</dd>
+          <dd className="weather-detail__desc-info">{rain}mm</dd>
         </div>
       </dl>
     </section>

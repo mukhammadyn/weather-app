@@ -6,17 +6,15 @@ import "./main.scss";
 
 export const Main = hoc(
   useMainProps,
-  ({ degree, name, date, weather, mode }) => {
+  ({ degree, name, date, }) => {
     return (
       <main className="main">
         <WeatherMainInfo
           degree={degree}
           name={name}
           date={date}
-          weather={weather}
-          mode={mode}
         />
-        <Navbar mode={mode} />
+        <Navbar />
       </main>
     );
   }
