@@ -1,5 +1,14 @@
+@import "../../assets/scss/mixins";
+
 .degree {
   margin: 0;
   font-size: 6rem;
   line-height: 0.5;
+}
+
+@include breakpoint-down(750px) {
+  .degree {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
 }

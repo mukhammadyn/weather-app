@@ -1,5 +1,6 @@
 @import '../../assets/scss/mixins';
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .cities {
   @include list-unstyled;
@@ -25,5 +26,12 @@
 
   &:hover {
     color: $color-primary;
+  }
+}
+
+@include breakpoint-down(820px) {
+  .cities {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }

@@ -1,5 +1,13 @@
+@import "../../assets/scss/mixins";
+
 .city-name {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 400;
+}
+
+@include breakpoint-down(750px) {
+  .city-name {
+    font-size: 1.5rem;
+  }
 }

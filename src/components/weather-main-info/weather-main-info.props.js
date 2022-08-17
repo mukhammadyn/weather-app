@@ -7,7 +7,7 @@ export const useWeatherInfoProps = () => {
 
   let theme = "";
 
-  if (clouds >= 15 && clouds <= 50) theme = "weather-main--grey";
+  if (clouds >= 10 && clouds <= 50) theme = "weather-main--grey";
   else if (clouds > 50 && clouds <= 80) theme = "weather-main--black";
   else theme = "";
 

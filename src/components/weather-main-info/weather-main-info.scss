@@ -1,4 +1,5 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
+@import "../../assets/scss/main.scss";
 
 .weather-main {
   max-width: 715px;
@@ -9,17 +10,32 @@
   justify-content: space-between;
   flex-grow: 3;
   padding: 2rem 3rem 6rem 5rem;
-  background-color: rgb(37,140,202);
-  background-image: linear-gradient(152deg, rgba(37,140,202,1) 0%, rgba(111,175,219,1) 50%, rgba(179,210,228,1) 100%);
+  background-color: rgb(37, 140, 202);
+  background-image: linear-gradient(
+    152deg,
+    rgba(37, 140, 202, 1) 0%,
+    rgba(111, 175, 219, 1) 50%,
+    rgba(179, 210, 228, 1) 100%
+  );
 
   &--grey {
     background-color: rgb(36 81 108);
-    background-image: linear-gradient(152deg, rgb(50 115 154) 0%, rgb(83 135 170) 50%, rgb(133 163 181) 100%);
+    background-image: url(../../assets/img/black-cloud.png),linear-gradient(
+      152deg,
+      rgb(50 115 154) 0%,
+      rgb(83 135 170) 50%,
+      rgb(133 163 181) 100%
+    );
   }
 
   &--black {
     background-color: rgb(37, 140, 202);
-    background-image: linear-gradient(152deg, rgb(25 82 116) 0%, rgb(47 70 85) 50%, rgb(103 114 120) 100%);
+    background-image: linear-gradient(
+      152deg,
+      rgb(25 82 116) 0%,
+      rgb(47 70 85) 50%,
+      rgb(103 114 120) 100%
+    );
   }
 }
 
@@ -46,4 +62,71 @@
   display: flex;
   align-items: flex-end;
   column-gap: 2rem;
+}
+
+@include breakpoint-down(960px) {
+  .weather-main {
+    max-width: 100%;
+    padding: 12rem 3rem 10rem 5rem;
+  }
+
+  .weather-main__info {
+    align-items: flex-end;
+  }
+
+  .weather-main__info-img {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@include breakpoint-down(820px) {
+  .weather-main {
+    padding: 5rem 3rem 5rem 5rem;
+  }
+
+  .weather-main__info {
+    padding: 4rem 3rem 2rem 2rem;
+  }
+
+  .weather-main__info-img {
+    width: 200px;
+  }
+}
+
+@include breakpoint-down(750px) {
+  .weather-main__info {
+    padding: 1rem;
+  }
+
+  .weather-detail__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .weather-main__info-img {
+    width: 110px;
+  }
+}
+
+@include breakpoint-down(600px) {
+  .weather-main__info {
+    flex-direction: column;
+  }
+}
+
+@include breakpoint-down(490px) {
+  .weather-main {
+    padding: 5rem 1rem 3rem 2rem;
+  }
+
+  .weather-main__info-img {
+    top: 1rem;
+    right: 0;
+  }
+}
+
+@include breakpoint-down(400px) {
+  .weather-main {
+    padding: 5rem 1rem 3rem 1rem;
+  }
 }

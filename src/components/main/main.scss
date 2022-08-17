@@ -1,6 +1,14 @@
+@import '../../assets/scss/main.scss';
+
 .main {
   display: flex;
   box-shadow: 0px 9px 62px 0px rgba(0,0,0,0.3);
   border-radius: 2px;
   overflow: hidden;
+}
+
+@include breakpoint-down(960px) {
+  .main {
+    flex-direction: column;
+  }
 }
